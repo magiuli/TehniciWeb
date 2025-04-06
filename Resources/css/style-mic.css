@@ -1,0 +1,22 @@
+:root{
+    --spacing-small: 0.5em;
+}
+
+html{
+    font-size: 12px;
+    transition: font-size 300ms;
+
+}
+
+main{
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
+}
+
+#grid-container{
+    display: block;
+}
+
+#grid-container > div{
+    margin: var(--spacing-small) 0em;
+}

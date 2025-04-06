@@ -1,0 +1,28 @@
+:root{
+    --spacing-medium: 0.75em;
+}
+
+html{
+    font-size: 14px;
+    transition: font-size 300ms;
+}
+
+main{
+    padding-left: var(--spacing-medium);
+    padding-right: var(--spacing-medium);
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-medium);
+
+    grid-template-areas: 
+        "prezentare-site prezentare-site"
+        "continut-divers continut-divers"
+        "tabel tabel"
+        "calendar date-site"
+        "date-utilizatori lista-utilizatori"
+        "anunturi anunturi";
+    }
+

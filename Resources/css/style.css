@@ -1,0 +1,90 @@
+:root{
+    --main-color: #4a2c2aff;
+    --secondary-color: #bf4e30ff;
+    --accent-color: #eca400ff;
+    --light-color: #f2efeaff;
+    --dark-color: #333333ff;
+
+    --spacing:1em;
+}
+
+html{
+    font-size: 16px;
+    transition: font-size 300ms;
+}
+
+body{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+header{
+    background-color: var(--main-color);
+    color: var(--light-color);
+}
+
+main {
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+}
+
+footer{
+    background-color: var(--main-color);
+    color: var(--light-color);
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing);
+
+    grid-template-areas: 
+        "prezentare-site prezentare-site prezentare-site prezentare-site"
+        "prezentare-site prezentare-site prezentare-site prezentare-site"
+        "tabel tabel continut-divers continut-divers"
+        "calendar date-utilizatori continut-divers continut-divers"
+        "lista-utilizatori date-utilizatori continut-divers continut-divers"
+        "lista-utilizatori anunturi anunturi date-site";
+}
+
+#prezentare-site{
+    grid-area: prezentare-site;
+}
+
+#tabel{
+    grid-area: tabel;
+}
+
+#calendar{
+    grid-area: calendar;
+}
+
+#date-utilizatori{
+    grid-area: date-utilizatori;
+}
+
+#lista-utilizatori{
+    grid-area: lista-utilizatori;
+}
+
+#anunturi{
+    grid-area: anunturi;
+}
+
+#continut-divers{
+    grid-area: continut-divers;
+}
+
+#date-site{
+    grid-area: date-site;
+}
+
+#grid-container > div{
+    width: 100%;
+    border : 5px solid var(--secondary-color);
+}
+
+img{
+    width: 100%;
+    max-width: 800px;
+}
