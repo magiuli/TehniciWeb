@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
 :root{
     --main-color: #4a2c2aff;
     --secondary-color: #bf4e30ff;
@@ -19,6 +21,8 @@ html{
 body{
     background-color: var(--light-color);
     color: var(--dark-color);
+
+    font-family: 'Comfortaa', sans-serif;
 }
 
 header{
@@ -92,7 +96,11 @@ footer{
     grid-area: date-site;
 }
 
-img, iframe{
+img{
     width: 100%;
+    max-width: var(--media-max-width);
+}
+
+iframe{
     max-width: var(--media-max-width);
 }
