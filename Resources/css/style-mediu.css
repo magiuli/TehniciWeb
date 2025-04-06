@@ -1,5 +1,7 @@
 :root{
     --spacing-medium: 0.75em;
+
+    --media-max-width: 600px;
 }
 
 html{

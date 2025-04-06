@@ -6,8 +6,9 @@
     --dark-color: #333333ff;
 
     --spacing:1em;
-
     --padding: 0.5em;
+
+    --media-max-width: 800px;
 }
 
 html{
@@ -91,7 +92,7 @@ footer{
     grid-area: date-site;
 }
 
-img{
+img, iframe{
     width: 100%;
-    max-width: 800px;
+    max-width: var(--media-max-width);
 }
