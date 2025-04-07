@@ -185,3 +185,41 @@ tr:hover {
 #link-top:hover #triunghi{
     border-color: transparent transparent var(--light-color) transparent;
 }
+
+iframe {
+    border: solid 10px;
+    border-color: var(--main-color) var(--main-color) var(--accent-color) var(--accent-color);
+}
+
+#video{
+    display: flex;
+    flex-direction: row;
+}
+
+#video a {
+    text-decoration: none;
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    font-weight: bold;
+
+    border: double;
+    border-left: none;
+    border-radius: 0px 10px 10px 0px;
+
+    padding: 10px;
+    margin: 0px;
+
+    transition: all 750ms;
+    width: 100px;
+    text-align: center;
+}
+
+#video-selector a:hover {
+    padding-left: 30px;
+    filter: brightness(1.1);
+}
+
+#video-selector{
+    display: flex;
+    flex-direction: column;
+}
