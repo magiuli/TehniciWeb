@@ -26,5 +26,9 @@ main{
         "calendar date-site"
         "date-utilizatori lista-utilizatori"
         "anunturi anunturi";
-    }
+}
 
+
+#tabel{
+    overflow-x: auto;
+}

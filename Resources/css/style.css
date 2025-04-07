@@ -104,3 +104,38 @@ img{
 iframe{
     max-width: var(--media-max-width);
 }
+
+table{
+    width: 100%;
+    margin: auto;
+    text-align: left;
+
+    border-collapse: collapse;
+    border: 5px inset;   
+}
+
+table caption{
+    caption-side: bottom;
+    padding: var(--padding);
+}
+
+
+tr:nth-child(odd) td{
+    border-bottom: 1px solid var(--main-color);
+}
+
+tr:nth-child(even) td{
+    border-bottom: 1px solid var(--accent-color);
+}
+
+tfoot tr td{
+    border-bottom: 1px solid var(--accent-color) !important;
+}
+
+tr {
+    transition: outline 0.5s ease-in-out;
+}
+
+tr:hover {
+    outline: 5px solid rgba(191, 78, 48, 0.7);
+}

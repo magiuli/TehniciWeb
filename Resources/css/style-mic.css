@@ -22,3 +22,8 @@ main{
 #grid-container > div{
     margin: var(--spacing-small) 0em;
 }
+
+
+#tabel{
+    overflow-x: auto;
+}
