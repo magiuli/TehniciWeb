@@ -32,7 +32,7 @@ header{
     color: var(--light-color);
     box-shadow: 0px 0px 20px var(--dark-color);
 
-    padding: var(--padding);
+    padding: 0px;
 }
 
 main {
@@ -96,6 +96,10 @@ footer{
 
 #date-site{
     grid-area: date-site;
+}
+
+h1{
+    padding: var(--padding);
 }
 
 img{
