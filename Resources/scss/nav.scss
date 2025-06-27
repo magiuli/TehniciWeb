@@ -25,8 +25,7 @@ nav{
 
     > ul{
         > li{
-            > a {
-                
+            > a {   
                 transition: transform var(--animation-duration) ease, font-weight var(--animation-duration) ease;
                 
                 &:hover{
@@ -60,9 +59,8 @@ nav{
     
 
     ul ul li a {
-        position: relative; // permite ::before/::after poziționate în raport cu linkul
+        position: relative;
 
-  // Efectele laterale
         &::before,
         &::after {
             content: "";
@@ -87,7 +85,7 @@ nav{
 
         &:hover::before,
         &:hover::after {
-            height: 100%; // crește pe verticală
+            height: 100%;
         }
     }
 }
