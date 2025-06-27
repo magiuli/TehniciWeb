@@ -33,9 +33,14 @@
     <header id="top">
         <h1>Pragmatica</h1>
         <nav>
-            <ul>
-                <li><a href=""><i class="fa-solid fa-house"></i> Acasa</a>
-                    <ul>
+            <label id="hamburger" for="ch-menu">
+                <img src="Resources/images/hamburger-icon.png" alt="menu">
+            </label>
+            <input id="ch-menu" type="checkbox">
+            
+            <ul id="menu">
+                <li><a href=""><i class="fa-solid fa-house"></i> <span id="acasa">Acasa</span></a>
+                    <ul class = "submenu">
                         <li><a href="#cine-suntem">Cine suntem</a></li>
                         <li><a href="#scop">Scopul nostru</a></li>
                         <li><a href="#testimoniale">Testimoniale</a></li>
@@ -44,7 +49,7 @@
                     </ul>
                 </li>
                 <li> <a href="">Galerii</a>
-                    <ul>
+                    <ul class = "submenu">
                         <li>
                             <a href="">Galerie statică</a>
                         </li>

@@ -1,12 +1,6 @@
-:root {
-  --main-color: #4a2c2aff;
-  --secondary-color: #bf4e30ff;
-  --accent-color: #eca400ff;
-  --light-color: #f2efeaff;
-  --dark-color: #333333ff;
-  --animation-duration: 0.5s;
+nav #hamburger, nav #ch-menu {
+  display: none;
 }
-
 nav ul {
   list-style: none;
   display: flex;
@@ -16,11 +10,11 @@ nav ul {
 nav a {
   text-decoration: none;
   padding: 1em;
-  color: var(--light-color);
+  color: #f2efea;
   display: block;
 }
 nav > ul > li > a {
-  transition: transform var(--animation-duration) ease, font-weight var(--animation-duration) ease;
+  transition: transform 0.5s ease, font-weight 0.5s ease;
 }
 nav > ul > li > a:hover {
   font-weight: bolder;
@@ -31,35 +25,76 @@ nav > ul > li ul {
   position: absolute;
   flex-direction: column;
   transform-origin: top;
-  transition: transform var(--animation-duration) ease;
+  transition: transform 0.5s ease;
 }
-nav > ul > li ul li a {
-  background-color: var(--main-color);
+nav > ul > li ul li {
+  background-color: #4a2c2a;
 }
 nav > ul > li:hover > ul {
   transform: scaleY(1);
 }
-nav ul ul li a {
+nav .submenu a {
   position: relative;
 }
-nav ul ul li a::before, nav ul ul li a::after {
+nav .submenu a::before, nav .submenu a::after {
   content: "";
   position: absolute;
   width: 10px;
   height: 0;
   top: 0;
-  transition: height var(--animation-duration) ease;
+  transition: height 0.5s ease;
   display: block;
   z-index: 1;
 }
-nav ul ul li a::before {
+nav .submenu a::before {
   left: 0;
-  background: linear-gradient(to right, var(--light-color), var(--main-color));
+  background: linear-gradient(to right, #f2efea, #4a2c2a);
 }
-nav ul ul li a::after {
+nav .submenu a::after {
   right: 0;
-  background: linear-gradient(to left, var(--light-color), var(--main-color));
+  background: linear-gradient(to left, #f2efea, #4a2c2a);
 }
-nav ul ul li a:hover::before, nav ul ul li a:hover::after {
+nav .submenu a:hover::before, nav .submenu a:hover::after {
   height: 100%;
+}
+@media (max-width: 800px) {
+  nav a {
+    font-size: 0.8em;
+  }
+  nav #acasa {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  nav #menu {
+    flex-direction: column;
+    overflow: hidden;
+    width: 0;
+  }
+  nav #menu li a {
+    display: none;
+  }
+  nav #hamburger {
+    display: block;
+  }
+  nav #hamburger img {
+    width: 25px;
+  }
+  nav #ch-menu:checked ~ #menu {
+    width: 100%;
+    transition: width 0.5s ease;
+  }
+  nav #ch-menu:checked ~ #menu li a {
+    display: block;
+  }
+  nav li {
+    text-align: center;
+  }
+  nav .submenu {
+    position: static;
+    max-height: 0;
+  }
+  nav li:hover > .submenu {
+    max-height: 500px;
+  }
 }/*# sourceMappingURL=nav.css.map */

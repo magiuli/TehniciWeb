@@ -10,6 +10,10 @@ $medim-width: 800px;
 $small-width: 600px;
 
 nav{
+    #hamburger, #ch-menu{
+        display: none;    
+    }
+
     ul{
         list-style: none;
         display: flex;
@@ -39,13 +43,12 @@ nav{
                 transform: scaleY(0);
                 position: absolute;
                 flex-direction: column;
-                // z-index: 10;
                 transform-origin: top;
                 transition: transform $animation-duration ease;
                 
                 li{
+                    background-color: $main-color;
                     a{
-                        background-color: $main-color;
                     }
                 }
             }
@@ -59,7 +62,7 @@ nav{
     }
     
 
-    ul ul li a {
+    .submenu a {
         position: relative;
 
         &::before,
@@ -87,6 +90,58 @@ nav{
         &:hover::before,
         &:hover::after {
             height: 100%;
+        }
+    }
+
+    @media (max-width: $medim-width) {
+        a {
+            font-size: 0.8em;
+        }
+
+        #acasa{
+            display: none;
+        }
+    }
+
+    @media (max-width: $small-width) {
+        #menu{
+            flex-direction: column;
+            overflow: hidden;
+            width: 0;
+
+            li a{
+                display: none;
+            }
+        }
+
+        #hamburger{
+            display: block;
+
+            img{
+                width: 25px;
+            }
+        }
+
+        #ch-menu:checked ~ #menu{
+            width: 100%;
+            transition: width $animation-duration ease;
+
+            li a{
+                display: block;
+            }
+        }
+
+        li {
+            text-align: center;
+        }
+           
+        .submenu {
+            position: static;
+            max-height: 0;
+        }
+
+        li:hover > .submenu {
+            max-height: 500px; 
         }
     }
 }
