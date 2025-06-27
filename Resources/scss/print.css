@@ -1,0 +1,67 @@
+#banner {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  left: 10%;
+  margin: auto;
+  border: dotted black;
+  text-align: center;
+}
+
+#link-top, #video-selector, img, iframe, figure, figcaption, nav {
+  display: none;
+}
+
+#grid-container {
+  display: block;
+}
+#grid-container div {
+  margin-top: 10px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #333333;
+}
+
+header {
+  margin-left: 2.5cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-break-after: page;
+       break-after: page;
+  margin-top: 50%;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-decoration: underline;
+}
+
+footer {
+  -moz-column-break-before: page;
+       break-before: page;
+}
+
+body::after {
+  content: "Matache Iulian Gabriel";
+  position: fixed;
+  width: 100px;
+  height: 2cm;
+  border: 1px double #333333;
+  opacity: 0.65;
+  bottom: 2cm;
+  right: 2cm;
+  z-index: -1;
+}
+
+@page :left {
+  margin-left: 2.5cm;
+  margin-right: 0.5cm;
+}
+@page :right {
+  margin-left: 0.5cm;
+  margin-right: 2.5cm;
+}/*# sourceMappingURL=print.css.map */
