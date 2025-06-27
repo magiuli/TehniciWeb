@@ -1,12 +1,13 @@
-:root{
-    --main-color: #4a2c2aff;
-    --secondary-color: #bf4e30ff;
-    --accent-color: #eca400ff;
-    --light-color: #f2efeaff;
-    --dark-color: #333333ff;
+$main-color: #4a2c2aff;
+$secondary-color: #bf4e30ff;
+$accent-color: #eca400ff;
+$light-color: #f2efeaff;
+$dark-color: #333333ff;
 
-    --animation-duration: 0.5s;
-}
+$animation-duration: 0.5s;
+
+$medim-width: 800px;
+$small-width: 600px;
 
 nav{
     ul{
@@ -19,14 +20,14 @@ nav{
     a{
         text-decoration: none;
         padding: 1em;
-        color: var(--light-color);
+        color: $light-color;
         display: block;
     }
 
     > ul{
         > li{
             > a {   
-                transition: transform var(--animation-duration) ease, font-weight var(--animation-duration) ease;
+                transition: transform $animation-duration ease, font-weight $animation-duration ease;
                 
                 &:hover{
                     font-weight: bolder;
@@ -40,11 +41,11 @@ nav{
                 flex-direction: column;
                 // z-index: 10;
                 transform-origin: top;
-                transition: transform var(--animation-duration) ease;
+                transition: transform $animation-duration ease;
                 
                 li{
                     a{
-                        background-color: var(--main-color);
+                        background-color: $main-color;
                     }
                 }
             }
@@ -68,19 +69,19 @@ nav{
             width: 10px;
             height: 0;
             top: 0;
-            transition: height var(--animation-duration) ease;
+            transition: height $animation-duration ease;
             display: block;
             z-index: 1;
         }
         
         &::before {
             left: 0;
-            background: linear-gradient(to right, var(--light-color), var(--main-color));
+            background: linear-gradient(to right, $light-color, $main-color);
         }
 
         &::after {
             right: 0;
-            background: linear-gradient(to left, var(--light-color), var(--main-color));
+            background: linear-gradient(to left, $light-color, $main-color);
         }
 
         &:hover::before,
