@@ -1,0 +1,38 @@
+@use '../../node_modules/bootstrap/scss/bootstrap.scss' with
+(
+    // Culori personalizate
+    $primary: #4a2c2aff,
+    $secondary: #bf4e30ff,
+    $accent: #eca400ff,
+    $light: #f2efeaff,
+    $dark: #333333ff,
+
+    // Culori font light si dark
+    $body-color: #333333ff,
+    $body-color-secondary: #f2efeaff,
+
+    // Dimensiuni ecran
+    $grid-breakpoints: (
+    "sm": 576px,
+    "md": 800px,
+    "lg": 1200px,
+    "xl": 1400px
+    ),
+
+    // Border radius
+    $border-radius: 0.5rem,
+    $border-radius-lg: 0.9rem,
+
+    $headings-font-size: (
+    "h1": 2.5rem,
+    "h2": 2rem,
+    "h3": 1.75rem,
+    "h4": 1.5rem,
+    ),
+    
+    // Fonturi 
+    $font-family-serif: 'Comfortaa', 
+
+    // Padding butoane pe axa y
+    $accordion-button-padding-y: 2rem
+)

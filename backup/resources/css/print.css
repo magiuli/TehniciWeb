@@ -16,6 +16,7 @@
 #grid-container {
   display: block;
 }
+
 #grid-container div {
   margin-top: 10px;
 }
@@ -30,6 +31,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  -moz-column-break-after: page;
   break-after: page;
   margin-top: 50%;
 }
@@ -40,6 +42,7 @@ h1 {
 }
 
 footer {
+  -moz-column-break-before: page;
   break-before: page;
 }
 
@@ -62,4 +65,4 @@ body::after {
 @page :right {
   margin-left: 0.5cm;
   margin-right: 2.5cm;
-}
+} 

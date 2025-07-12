@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/magiuli/TehniciWeb#readme",
   "dependencies": {
+    "bootstrap": "^5.3.7",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "sass": "^1.89.2"

@@ -227,14 +227,15 @@
                     </video>
                 </section>
             </div>
-            <div id="calendar">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quae modi nemo voluptate nobis, tenetur
-                fugit, eaque ullam doloremque iste sit, ea error temporibus laboriosam repellendus illum culpa natus
-                fuga!
+            <div id="calendar" class="d-flex justify-content-center">
+                <!-- buton afiseaza calendar cu bootstrap -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#calendarModal">
+                    Afiseaza calendar
+                </button>
             </div>
             <div id="date-utilizatori">
                 <section id="ip">
-                    <h2>Adresa IP</h2>
+                    <h3>Adresa IP</h3>
                     <p>Adresa dumneavoastra este: <span id="ip-address"><%- locals.ip %></span></p>
                 </section>
             </div>

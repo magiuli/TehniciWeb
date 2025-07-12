@@ -54,8 +54,9 @@ function compileazaScss(caleScss, caleCss) {
             const numeFisierCss = path.basename(caleCss);
             const extFisier = path.extname(numeFisierCss);
             const numeFaraExt = path.basename(numeFisierCss, extFisier);
-            const timestamp = Date.now();
-            const numeBackup = `${numeFaraExt}_${timestamp}${extFisier}`;
+            // const timestamp = Date.now();
+            // const numeBackup = `${numeFaraExt}_${timestamp}${extFisier}`;
+            const numeBackup = `${numeFaraExt}${extFisier}`;
 
             fs.copyFileSync(caleCss, path.join(caleBackup, numeBackup));
             console.log(`Backup creat pentru ${numeBackup}`);

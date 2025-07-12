@@ -12,7 +12,7 @@
 
     --media-max-width: 800px;
 
-    --top-link-size: 45px;
+    --top-link-size: 50px;
 }
 
 html{
@@ -36,8 +36,7 @@ header{
 }
 
 main {
-    padding-left: var(--spacing);
-    padding-right: var(--spacing);
+    padding: var(--padding);
 }
 
 footer{
@@ -214,7 +213,7 @@ iframe {
     margin: 0px;
 
     transition: all 750ms;
-    width: 100px;
+    width: 160px;
     text-align: center;
 }
 
@@ -244,7 +243,7 @@ iframe {
 }
 
 main, footer {
-  a{
+  a:not(.selector){
     background-image: radial-gradient(ellipse, var(--accent-color) 0%, var(--secondary-color) 40%, transparent 80%, transparent 100%);
     background-position: center;
     background-size: 0 0;
@@ -260,16 +259,90 @@ main, footer {
     color: var(--accent-color);
   }
 
-  a[href^="http"]::before {
+  a[href^="http"]:not(.selector)::before {
     content: "⮳";
     font-size: 1.5em;
   }
   
-  a[href^="http"]:hover::before {
+  a[href^="http"]:not(.selector):hover::before {
     color: var(--secondary-color);
   }
 
   a:active{
     border: 1px solid var(--accent-color);
   }
+}
+
+main a.selector::before {
+  content: none;
+}
+
+
+#hr-stilizat {
+  border: 0;
+  height: 20px; 
+
+  background-image:
+    linear-gradient(to right, var(--secondary-color) 50%, transparent 50%),
+    linear-gradient(to right, var(--secondary-color) 50%, transparent 50%);
+ 
+  background-position: 0 0, 10px 100%;
+
+  background-size: 20px 10px, 20px 10px;
+
+  background-repeat: repeat-x;
+}
+
+#efect-css-reflexie-text {
+    position: relative;
+    /* perspective: 600px; */
+}
+
+.text-original, .text-reflexie {
+    font-size: 6rem; 
+    font-weight: bold;
+    color: var(--light-color);
+    text-transform: uppercase;
+    text-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+    margin: 0; 
+}
+
+.text-reflexie {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%; 
+
+    transform-origin: center top;
+    transform: rotateX(180deg) scaleY(0.6);
+
+    opacity: 0.6;
+
+    -webkit-mask-image: repeating-radial-gradient(
+        ellipse at 50% 200%, 
+        black 0,
+        black 10px,        
+        transparent 10px,
+        transparent 20px   
+    );
+    mask-image: repeating-radial-gradient(
+        ellipse at 50% 200%,
+        black 0, black 10px, transparent 10px, transparent 20px
+    );
+    
+    -webkit-mask-size: 100% 40px; 
+    -webkit-mask-position: 0 0;
+    mask-size: 100% 40px;
+    mask-position: 0 0;
+}
+
+@keyframes unda-animatie {
+    to {
+        -webkit-mask-position: 0 -40px;
+        mask-position: 0 -40px;
+    }
+}
+
+#efect-css-reflexie-text:hover .text-reflexie {
+    animation: unda-animatie 1.5s linear infinite;
 }
