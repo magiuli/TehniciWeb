@@ -1,13 +1,10 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const sass = require('sass');
 
 const app = express(); 
 const port = 8080;
-
-obGlobal = {
-  obErori:null
-}
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -18,6 +15,12 @@ console.log('__dirname:', __dirname);
 console.log('__filename:', __filename);
 console.log('process.cwd():', process.cwd());
 
+obGlobal = {
+  obErori:null,
+  folderScss: path.join(__dirname, 'resources', 'scss'),
+  folderCss: path.join(__dirname, 'resources', 'css')
+}
+
 const vFoldere = ['temp', 'backup']
 vFoldere.forEach((folder) => {
   const caleFolder = path.join(__dirname, folder);
@@ -27,6 +30,65 @@ vFoldere.forEach((folder) => {
     console.log(`Folderul ${folder} a fost creat la ${caleFolder}`);
   }
 });
+
+function compileazaScss(caleScss, caleCss) {
+    if (!caleCss) {
+        let numeFisExt = path.basename(caleScss);
+        let numeFis = numeFisExt.split(".")[0];
+        caleCss = numeFis + ".css";
+    }
+
+    if (!path.isAbsolute(caleScss)) {
+        caleScss = path.join(obGlobal.folderScss, caleScss);
+    }
+    if (!path.isAbsolute(caleCss)) {
+        caleCss = path.join(obGlobal.folderCss, caleCss);
+    }
+
+    const caleBackup = path.join(__dirname, "backup", "resources", "css");
+    if (fs.existsSync(caleCss)) {
+        try {
+            if (!fs.existsSync(caleBackup))
+                fs.mkdirSync(caleBackup, { recursive: true });
+
+            const numeFisierCss = path.basename(caleCss);
+            const extFisier = path.extname(numeFisierCss);
+            const numeFaraExt = path.basename(numeFisierCss, extFisier);
+            const timestamp = Date.now();
+            const numeBackup = `${numeFaraExt}_${timestamp}${extFisier}`;
+
+            fs.copyFileSync(caleCss, path.join(caleBackup, numeBackup));
+            console.log(`Backup creat pentru ${numeBackup}`);
+        } catch (err) {
+            console.error(`Eroare la crearea backup-ului pentru ${caleCss}:`, err);
+        }
+    }
+
+    try {
+        const rezultat = sass.compile(caleScss, { "sourceMap": true });
+        fs.writeFileSync(caleCss, rezultat.css);
+        console.log(`Fisierul ${caleScss} a fost compilat cu succes in ${caleCss}`);
+    } catch (err) {
+        console.error(`Eroare la compilarea ${caleScss}:`, err.message);
+    }
+}
+
+vFisiere = fs.readdirSync(obGlobal.folderScss);
+for (let numeFis of vFisiere) {
+    if (path.extname(numeFis) == ".scss") {
+        compileazaScss(numeFis);
+    }
+}
+
+fs.watch(obGlobal.folderScss, function (eveniment, numeFis) {
+    console.log(eveniment, numeFis);
+    if (eveniment == "change" || eveniment == "rename") {
+        let caleCompleta = path.join(obGlobal.folderScss, numeFis);
+        if (fs.existsSync(caleCompleta)) {
+            compileazaScss(caleCompleta);
+        }
+    }
+})
 
 app.get(['/', '/index', '/home'], (req, res) => {
   res.render('pages/index.ejs', {
