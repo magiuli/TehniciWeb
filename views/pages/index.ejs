@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>Acasa</title>
+   
+    <meta name="keywords" content="acasa, marochinarie, ghiozdane, accesorii, genti">
+    <meta name="description"
+        content="Locul aflat la confluenta dintre practic si estetic. Aici vei gasi produse de marochinarie ce vor aduce satisfactie pana si celor mai inalte exigente.">
+
+
+        
+    <%- include("../fragments/head.ejs"); %>
+    <link rel="stylesheet" href="/resources/scss/print.css" media="print">
+</head>
+
+<body>
+    <%- include('../fragments/header.ejs'); %>
+    <main>
+        <div id="grid-container">
+            <div id="prezentare-site">
+                <section id="cine-suntem">
+                    <h2>Cine suntem <i class="fa-regular fa-question fa-beat" style="color: #0d0d0d;"></i></h2>
+                    <p>
+                        O echipa formata din 3 tineri <b>entuziaști</b> si <b>scoliti in Italia</b> dornici sa aduca in
+                        tara
+                        calitatea
+                        occidentala. Suntem pasionati de crearea produselor de <i>marochinarie</i>, precum ghiozdane,
+                        genti sau
+                        accesorii.
+                    </p>
+                    <section>
+                        <h3>Motto</h3>
+                        <blockquote>
+                            <em>Locul aflat la confluenta dintre practic si estetic.</em>
+                        </blockquote>
+                    </section>
+                </section>
+                <section id="scop">
+                    <h2>Scopul nostru</h2>
+                    <p>
+                        Ne dorim sa ridicam <i>marochinaria</i> la rang de <b>arta</b>. Studiind piata, am concluzionat
+                        ca
+                        putine produse din aceasta gama ating nivelul aferent al calitatii.
+                    </p>
+                    <p>Obiectivele noastre pentru anul 2025:</p>
+                    <ul>
+                        <li>marirea echipei</li>
+                        <li>deschiderea unui nou magazin fizic</li>
+                        <li>popularizarea brand-ului</li>
+                    </ul>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mrow>
+                            <mi>satisfacție</mi>
+                            <mo>=</mo>
+                            <mfrac>
+                                <mrow>
+                                    <mi>efort</mi>
+                                    <mo>×</mo>
+                                    <mi>seriozitate</mi>
+                                </mrow>
+                                <mi>experiențe negative</mi>
+                            </mfrac>
+                        </mrow>
+                    </math>
+                </section>
+                <section id="testimoniale">
+                    <h2>Testimoniale clienți</h2>
+                    <blockquote>
+                        <p>
+                            <q>Ghiozdanele sunt de o calitate superioara. Sunt foarte multumit de achizitie.</q>
+                        </p>
+                        <cite>Ion Popescu</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>
+                            <q>Stil, calitate, eleganta si practicalitate. Produsele Pragmatica au redefinit modul in
+                                care imi
+                                organizez viata.</q>
+                        </p>
+                        <cite>Maria Ionescu</cite>
+                    </blockquote>
+                    <blockquote>
+                        <p>
+                            <q>Ma bucur ca am ales accesoriile Pragmatica. Cei mai buni de pe
+                                piata!</q>
+                        </p>
+                        <cite>George Popa</cite>
+                    </blockquote>
+                </section>
+                <section id="best-sellers">
+                    <h2>Produse populare</h2>
+                    <article>
+                        <h3>Rucsac Pragma Adventurer</h3>
+                        <figure>
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="resources/images/pragma_adventurer_min.jpg">
+                                <source media="(max-width: 1024px)" srcset="resources/images/pragma_adventurer_mid.jpg">
+                                <source media="(min-width: 1025px)" srcset="resources/images/pragma_adventurer_max.jpg">
+                                <img src="resources/images/pragma_adventurer_max.jpg"
+                                    alt="Imagine a rucsacului pragma adventurer.">
+                            </picture>
+                            <figcaption>Rucsac Pragma Adventurer</figcaption>
+                        </figure>
+                        <p>Recenzii</p>
+                        <div id="video">
+                            <iframe name="Recenzii-Pragma-Adventurer" width="560" height="315"
+                                src="https://www.youtube.com/embed/eq4pPXEMxOk" title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div id="video-selector">
+                                <a class="selector" href="https://www.youtube.com/embed/eq4pPXEMxOk"
+                                    target="Recenzii-Pragma-Adventurer">Recenzia 1</a>
+                                <a class="selector" href="https://www.youtube.com/embed/Cu3KLmdi8Hs"
+                                    target="Recenzii-Pragma-Adventurer">Recenzia 2</a>
+                            </div>
+                        </div>
+                        <p>Parteneri: <a href="https://www.lowepro.com/global/collection/photo-sport/"
+                                target="_blank">Lowerpo</a></p>
+                    </article>
+                    <article>
+                        <h3>Rucsacuri aer</h3>
+                        <img src="resources/images/aer-backpack-group.jpg" alt="Harta de imagini"
+                            usemap="#aer-backpack-group">
+                        <map name="aer-backpack-group">
+                            <area shape="rect" coords="100,100,400,700"
+                                href="https://aersf.com/products/travel-pack-3?variant=39443423002720&country=RO"
+                                alt="Rucsac aer gri" target="_blank">
+                            <area shape="rect" coords="400,200,800,700"
+                                href="https://aersf.com/products/travel-pack-3?variant=39443422969952&country=RO"
+                                alt="Rucsac aer negru" target="_blank">
+                        </map>
+                    </article>
+                </section>
+                <section id="intrebari-frecvente">
+                    <h2>Intrebari frecvente</h2>
+                    <details>
+                        <summary>De unde achizitionez?</summary>
+                        <p>Produsele noastre pot fi achizionate fie de pe site-ul nostru, fie din magazinul fizic.</p>
+                    </details>
+                    <details>
+                        <summary>Cat dureaza garantia?</summary>
+                        <p>Avem atat de multa incredere in produsele noastre, incat oferim garantie pe viata!</p>
+                    </details>
+                    <details>
+                        <summary>Care este impactul produselor Pragmatica asupra mediului?</summary>
+                        <p>Produsele pragmatica contin doar piele ecologica si materialele 100%reciclabile.</p>
+                    </details>
+                    <details>
+                        <summary>Care este planul nostru de dezvoltare?</summary>
+                        <embed src="resources/docs/Etapa_0.pdf" type="application/pdf" width="1500" height="900">
+                    </details>
+                </section>
+            </div>
+            <div id="tabel">
+                <table>
+                    <caption>Cele mai vandute produse</caption>
+                    <thead>
+                        <tr>
+                            <th>Nume produs</th>
+                            <th>Numar de articole vandute</th>
+                            <th>Rating</th>
+                            <th>Pret</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pragma Adventurer</td>
+                            <td>200</td>
+                            <td>4.6</td>
+                            <td>249 lei</td>
+                        </tr>
+                        <tr>
+                            <td>Pragma City</td>
+                            <td>150</td>
+                            <td>4.5</td>
+                            <td>299 lei</td>
+                        </tr>
+                        <tr>
+                            <td>Pragma EDC</td>
+                            <td>300</td>
+                            <td>4.7</td>
+                            <td>349 lei</td>
+                        </tr>
+                        <tr>
+                            <td>Pramga Sling</td>
+                            <td>124</td>
+                            <td>4.7</td>
+                            <td>149 lei</td>
+                        </tr>
+                        <tr>
+                            <td>Pragma Wallet</td>
+                            <td>289</td>
+                            <td>4.6</td>
+                            <td>200 lei</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total</td>
+                            <td colspan="3">1063 de articole</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div id="continut-divers">
+                <section id="vtt">
+                    <video controls poster ="/resources/images/air_poster.png" preload="none">
+                        <source src="/resources/video/air.mp4" type="video/mp4">
+                        <source src="/resources/video/air.webm" type="video/webm">
+
+                        <track
+                            kind="subtitles",
+                            src="/resources/video/subtitles/air_ro.vtt",
+                            srclang="ro",
+                            label="Română",
+                            default 
+                        >
+
+                        <track
+                            kind="subtitles",
+                            src="/resources/video/subtitles/air_en.vtt",
+                            srclang="en",
+                            label="English"
+
+                        Browserul dumneavoastra nu suporta tag-ul video.
+                    </video>
+                </section>
+            </div>
+            <div id="calendar">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam quae modi nemo voluptate nobis, tenetur
+                fugit, eaque ullam doloremque iste sit, ea error temporibus laboriosam repellendus illum culpa natus
+                fuga!
+            </div>
+            <div id="date-utilizatori">
+                <section id="ip">
+                    <h2>Adresa IP</h2>
+                    <p>Adresa dumneavoastra este: <span id="ip-address"><%- locals.ip %></span></p>
+                </section>
+            </div>
+            <div id="lista-utilizatori">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo voluptas saepe amet molestias minima,
+                voluptatum vero nulla ad quae, nemo doloremque iure! Id voluptatum nostrum assumenda, voluptates esse
+                fugiat praesentium!
+            </div>
+            <div id="anunturi">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nisi aperiam eveniet accusamus
+                nesciunt fuga aut distinctio ad reiciendis, deleniti quam similique totam ea alias voluptatem nemo.
+                Consectetur, quisquam in!
+            </div>
+            <div id="date-site">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatum voluptas nesciunt
+                asperiores est nostrum itaque blanditiis libero similique ipsa. Facilis vitae excepturi quae facere
+                voluptatum quasi nemo mollitia tempore?
+            </div>
+        </div>
+    </main>
+
+    <%- include('../fragments/footer.ejs'); %>
+</body>
+
+</html>

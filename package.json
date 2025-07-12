@@ -1,0 +1,31 @@
+{
+  "name": "magazin_marochinarie",
+  "version": "1.0.0",
+  "description": "Site ul unui magazin de marochinarie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magiuli/TehniciWeb.git"
+  },
+  "keywords": [
+    "acasa",
+    "marochinarie",
+    "ghiozdane",
+    "accesorii",
+    "genti"
+  ],
+  "author": "Matache Iulian-Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magiuli/TehniciWeb/issues"
+  },
+  "homepage": "https://github.com/magiuli/TehniciWeb#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {}
+}

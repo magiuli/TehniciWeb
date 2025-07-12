@@ -1,0 +1,41 @@
+{
+    "cale_baza" : "/resources/images/errors",
+    "eroare_default" : {
+        "titlu" : "Eroare necunoscută",
+        "text" : "A apărut o eroare necunoscută",
+        "imagine" : "default.png"
+    },
+    "info_erori" : [
+        {
+            "cod" : 403,
+            "status" : true,
+            "titlu" : "Eroare 403",
+            "text" : "Oops! V-ați băgat nasul unde nu vă fierbe oala. Incercați în altă parte.",
+            "imagine" : "403.png"
+        },
+
+        {
+            "cod" : 404,
+            "status" : true,
+            "titlu" : "Eroare 404",
+            "text" : "Pagina nu a fost găsită",
+            "imagine" : "404.png"
+        },
+
+        {
+            "cod" : 400,
+            "status" : true,
+            "titlu" : "Eroare 400",
+            "text" : "Bad request! Ceva nu a mers bine cu cererea dumneavoastră.",
+            "imagine" : "400.png"
+        },
+
+        {
+            "cod" : 500,
+            "status" : true,
+            "titlu" : "Eroare 500",
+            "text" : "A apărut o eroare internă",
+            "imagine" : "500.png"
+        }
+    ]
+}

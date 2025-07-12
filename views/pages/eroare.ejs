@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pragmatica = eroare</title>
+    <%- include("../fragments/head.ejs"); %>
+</head>
+<body>
+    <%- include("../fragments/header.ejs"); %>
+    
+    <section>
+        <h1><%- locals.titlu %></h1>
+        <p><%- locals.text%></p>
+        <img src="<%- locals.imagine %>" alt="Imagine eroare <%- locals.cod%>" style="max-width: 300px;">
+    </section>
+
+</body>
+</html>
